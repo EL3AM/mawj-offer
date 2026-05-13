@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موج — موظفين رقميين لعملك</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Naskh Arabic', serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    line-height: 2;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 80px 24px; }
+  h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -1px; }
+  h2 { font-size: 1.5rem; font-weight: 600; color: #a78bfa; margin: 48px 0 16px; }
+  .subtitle { font-size: 1.25rem; color: #a0a0b8; margin-bottom: 48px; }
+  .wave { color: #7c3aed; }
+  .pill {
+    display: inline-block;
+    background: #1a1a2e;
+    color: #a78bfa;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    border: 1px solid #2a2a4e;
+    margin: 0 0 32px;
+  }
+  .pain { background: #111118; border: 1px solid #1e1e2e; border-radius: 16px; padding: 24px; margin: 24px 0; }
+  .pain p { color: #808090; margin: 8px 0; }
+  .pain p::before { content: "• "; color: #7c3aed; }
+  .card {
+    background: #111118;
+    border: 1px solid #1e1e2e;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 16px 0;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #7c3aed55; }
+  .card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
+  .card .emoji { font-size: 2rem; margin-bottom: 12px; }
+  .card p { color: #9090a8; margin: 4px 0; }
+  .reem-card {
+    background: linear-gradient(135deg, #1a1025 0%, #111118 100%);
+    border: 1px solid #7c3aed33;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .reem-card .name { font-size: 2rem; color: #fff; font-weight: 700; }
+  .reem-card .role { color: #a78bfa; margin: 4px 0 16px; }
+  .tg-btn {
+    display: inline-block;
+    background: #2a2a4e;
+    color: #a78bfa;
+    padding: 12px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: all 0.2s;
+  }
+  .tg-btn:hover { background: #3a3a6e; color: #c4b5fd; }
+  .timeline { display: flex; gap: 16px; margin: 32px 0; }
+  .timeline .day {
+    flex: 1;
+    background: #111118;
+    border: 1px solid #1e1e2e;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+  }
+  .timeline .day .num { font-size: 2rem; font-weight: 700; color: #7c3aed; }
+  .timeline .day .label { color: #808090; margin-top: 8px; font-size: 0.9rem; }
+  .pricing {
+    background: linear-gradient(135deg, #1a1025 0%, #111118 100%);
+    border: 1px solid #7c3aed33;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .pricing .amount { font-size: 3.5rem; font-weight: 700; color: #fff; }
+  .pricing .period { color: #a0a0b8; font-size: 1.2rem; }
+  .pricing .perks { color: #808090; margin: 16px 0; }
+  .pricing .perks p { margin: 4px 0; }
+  .testimonial {
+    background: #111118;
+    border-left: 3px solid #7c3aed;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+  }
+  .testimonial .quote { color: #c0c0d0; font-style: italic; }
+  .testimonial .author { color: #a78bfa; margin-top: 12px; font-weight: 600; }
+  .faq { margin: 32px 0; }
+  .faq details { margin: 12px 0; padding: 16px; background: #111118; border-radius: 12px; }
+  .faq summary { color: #fff; cursor: pointer; font-weight: 600; }
+  .faq p { color: #9090a8; margin-top: 8px; }
+  .cta {
+    display: block;
+    text-align: center;
+    background: #7c3aed;
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 48px auto;
+    max-width: 360px;
+    transition: background 0.2s;
+  }
+  .cta:hover { background: #6d28d9; }
+  .footer { text-align: center; color: #505060; margin-top: 80px; font-size: 0.85rem; }
+  .footer a { color: #7c3aed; text-decoration: none; }
+  @media (max-width: 600px) {
+    .container { padding: 40px 16px; }
+    h1 { font-size: 2rem; }
+    .timeline { flex-direction: column; }
+    .pricing .amount { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <span class="pill">🇴🇲 عُماني · مبني بـ Hermes Agent</span>
+  <h1><span class="wave">موج</span> — موظفين رقميين</h1>
+  <p class="subtitle">يعرفون عملك. يشتغلون ٢٤ ساعة. ما يمرضون. ما يستقيلون. ما ينسون.</p>
+
+  <div class="pain">
+    <p>إيميلات ما تنتهي ومتابعات ضايعة</p>
+    <p>تفاصيل عملاء في كل مكان وما حد يلحق</p>
+    <p>تقارير أسبوعية تأخذ ساعات من وقتك</p>
+    <p>كل شي معتمد على شخص واحد — أنت</p>
+  </div>
+
+  <h2>🫂 تعرّف على ريم — أول موظفة من موج</h2>
+  <div class="reem-card">
+    <div class="name">💜 ريم</div>
+    <div class="role">موظفة رقمية متخصصة في التسويق</div>
+    <p style="color:#9090a8;margin-bottom:16px">
+       تجلس في تيليقرام. تكلمها طبيعي — تتابع عملاءك، تسوي تقارير الحملات، ترتب تقويم المحتوى.
+    </p>
+    <p style="color:#a78bfa">🎤 كلّم ريم الحين:</p>
+    <a href="https://t.me/mawj_reem_bot" target="_blank" class="tg-btn">
+      📲 افتح محادثة مع ريم على تيليقرام
+    </a>
+  </div>
+
+  <h2>🎯 ٣ صناعات نخدمها</h2>
+  <div class="card">
+    <h3>📢 وكالات التسويق</h3>
+    <p>متابعة عملاء · تقارير حملات · تدقيق تقويم المحتوى · استفسارات جديدة</p>
+  </div>
+  <div class="card">
+    <h3>🏠 وكالات العقارات</h3>
+    <p>تحديث قوائم · متابعة عملاء · جدولة معاينات · تقارير أسبوعية</p>
+  </div>
+  <div class="card">
+    <h3>⚖️ مكاتب المحاماة</h3>
+    <p>إدارة قضايا · خطابات طلب · جدولة مواعيد · متابعة مستندات</p>
+  </div>
+
+  <h2>⚡ التشغيل في ٣ أيام</h2>
+  <div class="timeline">
+    <div class="day"><div class="num">١</div><div class="label">مكالمة ٣٠ دقيقة<br>نفهم عملك</div></div>
+    <div class="day"><div class="num">٢</div><div class="label">موظفك الرقمي حي<br>ويشتغل</div></div>
+    <div class="day"><div class="num">٣</div><div class="label">أول إنجاز حقيقي<br>على الطاولة</div></div>
+  </div>
+
+  <h2>💰 السعر</h2>
+  <div class="pricing">
+    <div class="amount">١٢٠٠</div>
+    <div class="period">ريال عُماني / شهرياً</div>
+    <div class="perks">
+      <p>✨ كل شي مفتوح — بدون حدود استخدام</p>
+      <p>🔄 تحسينات وتغييرات مستمرة</p>
+      <p>🛡️ دعم ومراقبة ٢٤/٧</p>
+      <p>🚫 ما فيه رسوم تركيب ولا عقود طويلة</p>
+      <p>❌ ألغِ في أي وقت</p>
+    </div>
+  </div>
+
+  <h2>💬 ما يقولونه عنا</h2>
+  <div class="testimonial">
+    <p class="quote">"أول أسبوع مع ريم — الفرق كبير. تقارير الحملات صارت تطلع بدون ما أطلبها. التوفير في الوقت وحده يستاهل."</p>
+    <p class="author">— أول عميل · وكالة تسويق · مسقط</p>
+  </div>
+  <div class="testimonial" style="opacity:0.6">
+    <p class="quote">"✋ عميل ثاني قريبًا"</p>
+  </div>
+
+  <h2>❓ أسئلة دايم تتسأل</h2>
+  <div class="faq">
+    <details>
+      <summary>شو الفرق عن ChatGPT؟</summary>
+      <p>ChatGPT مساعد عام. ريم موظفة تعرف عملك، تقرأ ملفاتك، تتابع عملاءك، وتشتغل بدون ما تطلب منها كل شي من جديد.</p>
+    </details>
+    <details>
+      <summary>أقدر أكلمها قبل لا أشتري؟</summary>
+      <p>أكيد. افتح @mawj_reem_bot على تيليقرام وكلمها الحين. لو عجبك شغلها — بعدين نتكلم في التفاصيل.</p>
+    </details>
+    <details>
+      <summary>هل بياناتي آمنة؟</summary>
+      <p>كل شي على خادم خاص بك. ما نشارك بياناتك مع أي طرف ثالث. الخادم معزول ومحمي.</p>
+    </details>
+    <details>
+      <summary>وش يصير لو ما عجبني؟</summary>
+      <p>تلغي اشتراكك. ما فيه التزام. بس أول ٣ أيام بتشوف الفرق بنفسك.</p>
+    </details>
+    <details>
+      <summary>هل أحتاج أعرف شي عن التقنية؟</summary>
+      <p>أبداً. هذا موظف — تكلمه طبيعي. احنا نهتم بالتقنية. أنت تهتم بعملك.</p>
+    </details>
+  </div>
+
+  <h2>📞 خلينا نتكلم</h2>
+  <p style="color:#a0a0b8;text-align:center;margin-bottom:24px">
+     مكالمة ٣٠ دقيقة — بدون التزام. نسمع احتياجك ونوريك شغلك مع ريم.
+  </p>
+  <a href="https://calendly.com/engleez" target="_blank" class="cta">احجز مكالمة تعارف — ٣٠ دقيقة</a>
+
+  </div>
+
+  <div class="footer">
+    موج (Mawj) · موظفين رقميين لعُمان والخليج · ٢٠٢٦<br>
+    مبني على <a href="https://hermes-agent.nousresearch.com" target="_blank">Hermes Agent</a> · فخورين نكون محليين<br>
+    <a href="https://instagram.com/engleez.ai" target="_blank">إنستقرام</a>
+  </div>
+
+</div>
+</body>
+</html>
