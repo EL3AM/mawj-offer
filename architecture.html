@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موج — المخطط المعماري</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Naskh Arabic', serif;
+    background: #080810;
+    color: #d0d0e0;
+    line-height: 2;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 80px 32px; }
+  h1 { font-size: 2.8rem; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -1px; }
+  h2 { font-size: 1.6rem; font-weight: 600; color: #a78bfa; margin: 56px 0 16px; border-bottom: 1px solid #1a1a2e; padding-bottom: 8px; }
+  h3 { font-size: 1.2rem; color: #c4b5fd; margin: 24px 0 12px; }
+  .subtitle { font-size: 1.3rem; color: #8080a0; margin-bottom: 48px; }
+  .wave { color: #7c3aed; }
+  .pill {
+    display: inline-block;
+    background: #7c3aed11;
+    color: #a78bfa;
+    padding: 4px 14px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    border: 1px solid #7c3aed33;
+    margin: 0 0 32px;
+  }
+  .section { 
+    background: #0e0e18; 
+    border: 1px solid #1a1a2e; 
+    border-radius: 16px; 
+    padding: 32px; 
+    margin: 24px 0; 
+  }
+  .section h3 { margin-top: 0; }
+  .section p { color: #9090b0; margin: 8px 0; }
+  .diagram {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: #0a0a14;
+    border: 1px solid #1a1a2e;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    white-space: pre;
+    overflow-x: auto;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #8080a8;
+    direction: ltr;
+    text-align: left;
+  }
+  .diagram .purple { color: #a78bfa; }
+  .diagram .white { color: #e0e0e0; }
+  .diagram .dim { color: #606080; }
+  .diagram .green { color: #4ade80; }
+  .diagram .amber { color: #fbbf24; }
+  .diagram .blue { color: #60a5fa; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 24px 0; }
+  .card {
+    background: #0e0e18;
+    border: 1px solid #1a1a2e;
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #7c3aed44; }
+  .card .emoji { font-size: 1.5rem; margin-bottom: 8px; }
+  .card h4 { color: #fff; margin-bottom: 4px; font-size: 1rem; }
+  .card p { color: #8080a8; font-size: 0.9rem; }
+  .stat-row { display: flex; gap: 24px; flex-wrap: wrap; margin: 32px 0; }
+  .stat {
+    flex: 1; min-width: 140px;
+    background: linear-gradient(135deg, #7c3aed11, #0e0e18);
+    border: 1px solid #7c3aed22;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+  }
+  .stat .num { font-size: 2.5rem; font-weight: 700; color: #a78bfa; }
+  .stat .label { color: #8080a8; font-size: 0.85rem; margin-top: 4px; }
+  code { font-family: 'JetBrains Mono', monospace; background: #1a1a2e; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; color: #a78bfa; direction: ltr; display: inline-block; }
+  .footer { text-align: center; color: #404060; margin-top: 80px; font-size: 0.85rem; }
+  .phase { border-left: 3px solid #7c3aed; padding-left: 24px; margin: 24px 0; }
+  .phase h4 { color: #c4b5fd; }
+  .phase p { color: #8080a8; }
+  @media (max-width: 700px) {
+    .container { padding: 40px 16px; }
+    h1 { font-size: 1.8rem; }
+    .diagram { font-size: 0.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <span class="pill">🇴🇲 حيدر · موج · عُمان</span>
+  <h1><span class="wave">موج</span> — المخطط المعماري</h1>
+  <p class="subtitle">المؤسسة الرقمية الحية — من ملك إلى عرش من الوكلاء الذكية</p>
+
+  <div class="stat-row">
+    <div class="stat"><div class="num">👑 1</div><div class="label">عقل مدبر (حيدر)</div></div>
+    <div class="stat"><div class="num">🦾 4</div><div class="label">موظفين متخصصين</div></div>
+    <div class="stat"><div class="num">🌐 1</div><div class="label">وكيل استخبارات</div></div>
+    <div class="stat"><div class="num">💡 1</div><div class="label">كشاف ابتكار (قيد البناء)</div></div>
+  </div>
+
+  <h2>🏛️ الرؤية المعمارية</h2>
+  <div class="section">
+    <p><strong>موج</strong> ليست مجرد شركة وكلاء رقميين. موجة هي <strong>أول مؤسسة رقمية حية في عُمان</strong> — نظام عصبي ذكي يتنفس السوق، يتعلم، يقترح، ينفذ، ويتطور ذاتياً. بينما باقي الشركات تشتري أدوات وتنتظر التحديث، مؤسسة موجة تتكاثر. تخلق نسخاً من نفسها عند الطلب. كل موظف جديد = ولادة رقمية.</p>
+    <p style="margin-top:16px">المبدأ الأساسي: <strong style="color:#a78bfa">"وكلاء يبنون وكلاء. الموظف الرقمي يبني موظفين رقميين."</strong> — Nick من Orgo</p>
+  </div>
+
+  <h2>🧬 المعمارية الكاملة — الخريطة العصبية</h2>
+  <div class="diagram">
+<span class="dim">              ┌──────────────────────────────────────────────────────────────┐</span>
+<span class="dim">              │</span>              <span class="purple">👑 يحيى — المؤسس والقائد</span>                      <span class="dim">│</span>
+<span class="dim">              │</span>         يقرر الرؤية، يبيع، يتواصل مع المستثمرين                <span class="dim">│</span>
+<span class="dim">              └──────────────────────────┬───────────────────────────────────┘</span>
+                                         │
+<span class="dim">              ┌──────────────────────────┼───────────────────────────────────┐</span>
+<span class="dim">              │</span>                          │                                   <span class="dim">│</span>
+<span class="dim">              │</span>           <span class="white">🧠 حيدر — العقل المدبر (Mac M4 Max)</span>               <span class="dim">│</span>
+<span class="dim">              │</span>     يستقبل أوامر يحيى، يدير المؤسسة، يوزع المهام               <span class="dim">│</span>
+<span class="dim">              │</span>                          │                                   <span class="dim">│</span>
+<span class="dim">              │</span>     ┌────────────────────┼────────────────────┐              <span class="dim">│</span>
+<span class="dim">              │</span>     │                    │                    │              <span class="dim">│</span>
+<span class="dim">              │</span>     ▼                    ▼                    ▼              <span class="dim">│</span>
+<span class="dim">              │</span>  <span class="green">🦴 الهيكل</span>         <span class="green">🧠 الذاكرة</span>          <span class="green">👁️ الحواس</span>           <span class="dim">│</span>
+<span class="dim">              │</span>  config + keys     Mem0 + Skills       Gateway + TTS         <span class="dim">│</span>
+<span class="dim">              │</span>  auth + SOUL       168 إجراء            صوت + سمع           <span class="dim">│</span>
+<span class="dim">              │</span>                          │                                   <span class="dim">│</span>
+<span class="dim">              │</span>     ┌────────────────────┼────────────────────┐              <span class="dim">│</span>
+<span class="dim">              │</span>     │                    │                    │              <span class="dim">│</span>
+<span class="dim">              │</span>     ▼                    ▼                    ▼              <span class="dim">│</span>
+<span class="dim">              │</span>  <span class="green">🧠 العقل</span>          <span class="green">👐 الأيادي</span>          <span class="green">🗂️ الخزانة</span>         <span class="dim">│</span>
+<span class="dim">              │</span>  Model Router      Terminal + File      Obsidian + DB        <span class="dim">│</span>
+<span class="dim">              │</span>  Orchestrator      Browser + Code        Voice Memos         <span class="dim">│</span>
+<span class="dim">              │</span>                          │                                   <span class="dim">│</span>
+<span class="dim">              └──────────────────────────┼───────────────────────────────────┘</span>
+                                         │
+                    ┌────────────────────┼────────────────────┐
+                    │                    │                    │
+                    ▼                    ▼                    ▼
+          <span class="amber">┌──────────────┐</span>   <span class="amber">┌──────────────┐</span>   <span class="amber">┌──────────────┐</span>
+          <span class="amber">│  🌐 السوق    │</span>   <span class="amber">│  💡 الابتكار │</span>   <span class="amber">│  ⏰ النبض    │</span>
+          <span class="amber">│ Intel Agent  │</span>   <span class="amber">│ Scout Agent  │</span>   <span class="amber">│  Watchdog    │</span>
+          <span class="amber">│ (أسبوعي)     │</span>   <span class="amber">│ (قيد البناء) │</span>   <span class="amber">│ (كل ٥ دقائق)│</span>
+          <span class="amber">└──────┬───────┘</span>   <span class="amber">└──────┬───────┘</span>   <span class="amber">└──────────────┘</span>
+                 │                  │
+                 └────────┬─────────┘
+                          │ يغذيان
+                          ▼
+     ┌────────────────────┼────────────────────┐
+     │                    │                    │
+     ▼                    ▼                    ▼
+<span class="blue">┌─────────┐</span>    <span class="blue">┌─────────┐</span>    <span class="blue">┌─────────┐</span>    <span class="blue">┌─────────┐</span>
+<span class="blue">│ 💜 ريم  │</span>    <span class="blue">│ 🔧 مهند │</span>    <span class="blue">│ 🏠 خالد │</span>    <span class="blue">│ ⚖️ سارة │</span>
+<span class="blue">│ تسويق   │</span>    <span class="blue">│ صناعة   │</span>    <span class="blue">│ عقارات  │</span>    <span class="blue">│ قانون   │</span>
+<span class="blue">└────┬────┘</span>    <span class="blue">└────┬────┘</span>    <span class="blue">└────┬────┘</span>    <span class="blue">└────┬────┘</span>
+     │                │                │                │
+     └────────────────┴────────────────┴────────────────┘
+                          │
+                          ▼
+              <span class="white">🏢 عملاء الموج — ١٢٠٠ ريال شهرياً</span>
+  </div>
+
+  <h2>⚙️ المكونات الأساسية</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">🧠</div>
+      <h4>حيدر — العقل المدبر</h4>
+      <p>يستقبل أوامر يحيى. يخطط، ينفذ، يراقب، يوزع على المساعدين. ذاكرة دائمة ومهارات متطورة. العقل الرئيسي للمؤسسة. يتكلم مع يحيى في تيليقرام ٢٤/٧.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌐</div>
+      <h4>وكيل استخبارات السوق</h4>
+      <p>يمسح السوق العماني والخليجي أسبوعياً. يغذي كل الموظفين المتخصصين بمعلومات حية عن الاقتصاد، التوجهات، والتغيرات. يضمن إن الموظفين دايم محدثين.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">💡</div>
+      <h4>كشاف الابتكار</h4>
+      <p>قيد البناء. يبحث عن منهجيات وأساليب جديدة لكل قطاع. يقترح استراتيجيات مبتكرة للموظفين المتخصصين. يضمن تطور المؤسسة المستمر.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">⏰</div>
+      <h4>النبض — Watchdog</h4>
+      <p>يراقب كل البوابات كل ٥ دقائق. أي موظف يطيح — يكتشف ويصلح قبل لا العميل يدري. المؤسسة ما تنام.</p>
+    </div>
+  </div>
+
+  <h2>👶 الموظفون المتخصصون — أبناء الموج</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">💜</div>
+      <h4>ريم — التسويق</h4>
+      <p>متابعة عملاء · تقارير حملات · تقويم محتوى · استفسارات جديدة · تحليل أداء</p>
+      <p style="color:#a78bfa;margin-top:8px">@mawj_reem_bot</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔧</div>
+      <h4>مهند — الصناعة</h4>
+      <p>تقارير إنتاج · متابعة مخزون · صيانة وقائية · جودة · سلسلة توريد · SOPs</p>
+      <p style="color:#a78bfa;margin-top:8px">@mawj_muhannad_bot</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🏠</div>
+      <h4>خالد — العقارات</h4>
+      <p>إدارة عقارات · متابعة عملاء · جدولة معاينات · عقود · تقارير سوق</p>
+      <p style="color:#a78bfa;margin-top:8px">@mawj_khalid_bot</p>
+    </div>
+    <div class="card">
+      <div class="emoji">⚖️</div>
+      <h4>سارة — القانون</h4>
+      <p>إدارة قضايا · صياغة خطابات · مواعيد جلسات · فواتير · متابعة عملاء</p>
+      <p style="color:#a78bfa;margin-top:8px">@mawj_sara_bot</p>
+    </div>
+  </div>
+
+  <h2>📡 تدفق المعلومات الحية</h2>
+  <div class="section">
+    <h3>كيف يتنفس السوق داخل المؤسسة</h3>
+    <div class="diagram">
+<span class="dim">كل يوم سبت ٩ صباحاً:</span>
+
+  <span class="white">وكيل استخبارات السوق</span>
+  <span class="dim">│  يبحث في: أخبار عُمان الاقتصادية · توجهات المستهلك الخليجي</span>
+  <span class="dim">│  العقارات · الصناعة · القانون · التسويق</span>
+  <span class="dim">│</span>
+  <span class="dim">├──→ يحلل ويكتب تقريراً مفصلاً</span>
+  <span class="dim">│</span>
+  <span class="dim">├──→ 🟢 يغذي ريم بمعلومات التسويق</span>
+  <span class="dim">├──→ 🟢 يغذي مهند بمعلومات الصناعة</span>
+  <span class="dim">├──→ 🟢 يغذي خالد بمعلومات العقارات</span>
+  <span class="dim">├──→ 🟢 يغذي سارة بمعلومات القانون</span>
+  <span class="dim">│</span>
+  <span class="dim">└──→ 📲 يرسل التقرير الكامل ليحيى في تيليقرام</span>
+    </div>
+    <p style="color:#8080a8;margin-top:16px">كل أسبوع، المؤسسة تتغذى بالواقع الحي. الموظفون لا يتعلمون من ملفات ثابتة — يتعلمون من السوق الفعلي.</p>
+  </div>
+
+  <h2>💰 هيكل التسعير</h2>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="num">١٢٠٠</div>
+      <div class="label">ريال عُماني / شهرياً</div>
+    </div>
+    <div class="stat">
+      <div class="num">∞</div>
+      <div class="label">كل الموظفين. كل القطاعات.</div>
+    </div>
+    <div class="stat">
+      <div class="num">٣</div>
+      <div class="label">أيام للتشغيل الكامل</div>
+    </div>
+  </div>
+  <div class="section">
+    <p><strong>سعر واحد. عرض واحد. كل شي مفتوح.</strong> لا باقات. لا حدود. لا رسوم خفية. أي عميل يستخدم أي عدد من الموظفين تحت سقف الاشتراك الواحد.</p>
+  </div>
+
+  <h2>🔮 المرحلة القادمة</h2>
+  <div class="phase">
+    <h4>المرحلة ٢ — تدريب الموظفين</h4>
+    <p>حقن ريم بالمفاهيم التسويقية المتقدمة. تغذيتها بتقارير السوق الحية. تدريب مهند وخالد وسارة تباعاً.</p>
+  </div>
+  <div class="phase">
+    <h4>المرحلة ٣ — إطلاق كشاف الابتكار</h4>
+    <p>وكيل جديد يبحث عن منهجيات وأساليب مبتكرة ويقترحها على الموظفين المتخصصين. المؤسسة تصبح ذاتية التطور.</p>
+  </div>
+  <div class="phase">
+    <h4>المرحلة ٤ — أول عميل</h4>
+    <p>طرح الخدمة في السوق. تجربة مجانية مدة أسبوع. أول نتيجة فعلية. عقد شهري.</p>
+  </div>
+  <div class="phase">
+    <h4>المرحلة ٥ — الانتشار</h4>
+    <p>إضافة منصات جديدة (واتساب). توسيع القطاعات. محرك نشر آلي للعملاء الجدد.</p>
+  </div>
+
+  <h2>🎯 لماذا هذه المعمارية مختلفة؟</h2>
+  <div class="section">
+    <p><strong>١. المؤسسة تتنفس.</strong> ليست برمجيات جامدة. تغذي نفسها بمعلومات السوق أسبوعياً.</p>
+    <p style="margin-top:12px"><strong>٢. المؤسسة تتكاثر.</strong> أي موظف جديد ينسخ من القالب وينطلق في دقائق. مش شهور.</p>
+    <p style="margin-top:12px"><strong>٣. المؤسسة تفكر.</strong> العقل المدبر (حيدر) يخطط وينفذ. الموظفون المتخصصون ينفذون مع العملاء.</p>
+    <p style="margin-top:12px"><strong>٤. المؤسسة لا تنام.</strong> واتشدوغ يراقب كل ٥ دقائق. كرون جوبس أسبوعية.</p>
+    <p style="margin-top:12px"><strong>٥. المؤسسة عُمانية.</strong> تفهم السوق المحلي. تتكلم العربية. صممت للخليج.</p>
+    <p style="margin-top:12px"><strong>٦. المؤسسة تتطور.</strong> كل أسبوع تتعلم من السوق. كل شهر تتحسن. كل سنة تتضاعف.</p>
+  </div>
+
+  <div class="footer">
+    موج — المؤسسة الرقمية الحية الأولى في عُمان<br>
+    بنيت ب ❤️ على Hermes Agent · ٢٠٢٦<br>
+    getmawj.com
+  </div>
+
+</div>
+</body>
+</html>
